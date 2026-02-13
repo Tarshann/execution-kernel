@@ -4,17 +4,16 @@
 
 The development of the Execution Kernel will follow a phased approach, prioritizing foundational components and iterative delivery. Each phase will build upon the previous one, ensuring a stable and robust system.
 
-### Phase 1: Core Policy Enforcement (Current Focus)
+### Phase 1: Deterministic Policy Evaluator (Current Focus)
 
-**Objective**: Establish the minimal viable policy enforcement mechanism and core traceability.
+**Objective**: Transition from "architecture theater" to "mechanical enforcement" by building a standalone policy evaluation service.
 
 **Key Deliverables**:
-- **Policy Engine**: Basic implementation capable of evaluating simple `ALLOW`/`DENY` policies.
-- **Decision Log**: Initial implementation for immutable logging of policy decisions.
-- **Execution Interceptor**: Proof-of-concept for intercepting agent requests.
-- **Basic PDL**: A simple, human-readable language for defining policies.
-- **Agent Interface**: A basic SDK/API for agents to submit requests.
-- **Initial Tests**: Unit and integration tests for core components.
+- **Deterministic Policy Engine**: A Python-based service that evaluates JSON execution requests against a set of rules.
+- **Phase 1 Contract**: A strict JSON schema for policy inputs and outputs.
+- **Decision Log**: A structured log of every evaluation, including risk levels and required approvals.
+- **Comprehensive Test Suite**: 20+ unit tests verifying deterministic behavior and edge cases.
+- **Shipping Factory Integration**: The `solo` CLI updated to call the Kernel for policy approval before proceeding.
 
 **Success Criteria**:
 - An agent can submit a request to the Kernel.

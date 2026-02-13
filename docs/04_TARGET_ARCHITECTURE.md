@@ -2,7 +2,7 @@
 
 ## The Execution Kernel: A Specification-First Architecture
 
-The Execution Kernel is designed as a **specification-first, implementation-second** system. This architectural choice prioritizes clarity, formal verification, and interoperability over premature code. The Kernel will function as a standalone service, acting as a control plane daemon that intercepts, evaluates, and governs agent execution requests.
+The Execution Kernel is a **standalone control plane service** (daemon) that provides deterministic governance for autonomous systems. It is decoupled from the clients it governs (e.g., the Shipping Factory), ensuring a clean audit boundary and agent-agnostic operation. This architecture prioritizes mechanical enforcement over philosophical alignment.
 
 ## Core Components:
 
@@ -27,7 +27,10 @@ The Execution Kernel is designed as a **specification-first, implementation-seco
 
 ## Deployment Model:
 
-The Execution Kernel will be deployed as a standalone, highly available service, acting as a central control point for all governed agent activities. It will be designed for low-latency operation and high throughput to minimize impact on agent performance.
+The Execution Kernel operates as a **standalone service** accessible via a standardized API (e.g., HTTP/JSON). This ensures:
+- **Clean Policy Boundary**: Governance logic is isolated from application logic.
+- **Infrastructure Credibility**: A dedicated service provides a clear audit trail and is easier for enterprise environments to trust.
+- **Scalability**: The Kernel can evolve independently of the agents it governs.
 
 ---
 
