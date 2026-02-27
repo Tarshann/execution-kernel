@@ -1,0 +1,154 @@
+{
+  "webapp": {
+    "production": {
+      "risk_level": "high",
+      "approvals_required": 2,
+      "constraints": {
+        "no_self_approval": true,
+        "log_all_actions": true
+      }
+    },
+    "staging": {
+      "risk_level": "medium",
+      "approvals_required": 1,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": true
+      }
+    },
+    "development": {
+      "risk_level": "low",
+      "approvals_required": 0,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": false
+      }
+    }
+  },
+  "page": {
+    "production": {
+      "risk_level": "medium",
+      "approvals_required": 1,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": true
+      }
+    },
+    "staging": {
+      "risk_level": "low",
+      "approvals_required": 0,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": false
+      }
+    },
+    "development": {
+      "risk_level": "low",
+      "approvals_required": 0,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": false
+      }
+    }
+  },
+  "automation": {
+    "production": {
+      "risk_level": "high",
+      "approvals_required": 1,
+      "constraints": {
+        "no_self_approval": true,
+        "log_all_actions": true,
+        "isolation_required": true
+      }
+    },
+    "staging": {
+      "risk_level": "medium",
+      "approvals_required": 1,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": true,
+        "isolation_required": true
+      }
+    },
+    "development": {
+      "risk_level": "low",
+      "approvals_required": 0,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": false,
+        "isolation_required": false
+      }
+    }
+  },
+  "app": {
+    "production": {
+      "risk_level": "high",
+      "approvals_required": 2,
+      "constraints": {
+        "no_self_approval": true,
+        "log_all_actions": true
+      }
+    },
+    "staging": {
+      "risk_level": "medium",
+      "approvals_required": 1,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": true
+      }
+    },
+    "development": {
+      "risk_level": "low",
+      "approvals_required": 0,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": false
+      }
+    }
+  },
+  "integration": {
+    "production": {
+      "risk_level": "high",
+      "approvals_required": 2,
+      "constraints": {
+        "no_self_approval": true,
+        "log_all_actions": true,
+        "isolation_required": true
+      }
+    },
+    "staging": {
+      "risk_level": "medium",
+      "approvals_required": 1,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": true
+      }
+    },
+    "development": {
+      "risk_level": "low",
+      "approvals_required": 0,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": false
+      }
+    }
+  },
+  "content": {
+    "production": {
+      "risk_level": "low",
+      "approvals_required": 0,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": true
+      }
+    },
+    "development": {
+      "risk_level": "low",
+      "approvals_required": 0,
+      "constraints": {
+        "no_self_approval": false,
+        "log_all_actions": false
+      }
+    }
+  }
+}
